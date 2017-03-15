@@ -5,7 +5,9 @@
 # Home page
 GET     /                                       Start.index
 GET     /dashboard                              Dashboard.index
+POST    /dashboard/addtodo                      Dashboard.addTodo
 GET     /about                                  About.index
+
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
