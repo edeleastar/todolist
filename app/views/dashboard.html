@@ -8,13 +8,13 @@
     Todo List
   </header>
   <div class="ui bulleted list">
-    <div class="ui item"> Make tea</div>
-    <div class="ui item"> Go for snooze</div>
-    <div class="ui item"> Make more tea</div>
+  #{list items:todolist, as:'todo'}
+    <div class="ui item"> ${todo.title} </div>
+  #{/list}
   </div>
 </section>
 
-<form class="ui stacked segment form" action="/dashboard/addplaylist" method="POST">
+<form class="ui stacked segment form" action="/dashboard/addtodo" method="POST">
   <div class="field">
     <label>Title</label>
     <input placeholder="Title" type="text" name="title">
