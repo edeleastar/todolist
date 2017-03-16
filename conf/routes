@@ -6,6 +6,7 @@
 GET     /                                       Start.index
 GET     /dashboard                              Dashboard.index
 POST    /dashboard/addtodo                      Dashboard.addTodo
+GET     /dashboard/deletetodo/{id}              Dashboard.deleteTodo
 GET     /about                                  About.index
 
 
