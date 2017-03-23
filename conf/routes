@@ -4,6 +4,10 @@
 
 # Home page
 GET     /                                       Start.index
+
+GET    /signup                                  Accounts.signup
+GET    /login                                   Accounts.login
+
 GET     /dashboard                              Dashboard.index
 POST    /dashboard/addtodo                      Dashboard.addTodo
 GET     /dashboard/deletetodo/{id}              Dashboard.deleteTodo
