@@ -13,7 +13,7 @@ GET    /logout                                  Accounts.logout
 
 GET     /dashboard                              Dashboard.index
 POST    /dashboard/addtodo                      Dashboard.addTodo
-GET     /dashboard/deletetodo/{id}              Dashboard.deleteTodo
+GET     /dashboard/{id}/deletetodo/{todoid}     Dashboard.deleteTodo
 GET     /admin                                  Admin.index
 GET     /about                                  About.index
 
