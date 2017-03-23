@@ -12,9 +12,14 @@ Member(m1):
   lastname: simpson
   email: homer@simpson.com
   password: secret
+  todolist:
+  - t1
+  - t2
 
 Member(m2):
   firstname: marge
   lastname: simpson
   email: marge@simpson.com
   password: secret
+  todolist:
+  - t3
