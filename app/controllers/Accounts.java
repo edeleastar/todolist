@@ -23,4 +23,25 @@ public class Accounts extends Controller
     member.save();
     redirect("/");
   }
+
+  public static void authenticate(String email, String password)
+  {
+    Logger.info("Attempting to authenticate with " + email + ":" + password);
+
+    Member member = Member.findByEmail(email);
+    if ((member != null) && (member.checkPassword(password) == true)) {
+      Logger.info("Authentication successful");
+      session.put("logged_in_Memberid", member.id);
+      redirect ("/dashboard");
+    } else {
+      Logger.info("Authentication failed");
+      login();
+    }
+  }
+
+  public static void logout()
+  {
+    session.clear();
+    redirect ("/");
+  }
 }

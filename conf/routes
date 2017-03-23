@@ -8,6 +8,8 @@ GET     /                                       Start.index
 GET    /signup                                  Accounts.signup
 GET    /login                                   Accounts.login
 POST   /register                                Accounts.register
+POST   /authenticate                            Accounts.authenticate
+GET    /logout                                  Accounts.logout
 
 GET     /dashboard                              Dashboard.index
 POST    /dashboard/addtodo                      Dashboard.addTodo
