@@ -35,7 +35,7 @@ public class Accounts extends Controller
       redirect ("/dashboard");
     } else {
       Logger.info("Authentication failed");
-      login();
+      redirect("/login");
     }
   }
 
