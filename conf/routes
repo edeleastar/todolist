@@ -17,6 +17,8 @@ GET     /dashboard/{id}/deletetodo/{todoid}     Dashboard.deleteTodo
 GET     /admin                                  Admin.index
 GET     /about                                  About.index
 
+GET     /getimage/{id}                          Dashboard.getImage
+
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
