@@ -12,6 +12,7 @@
     <tr>
       <th>Todo</th>
       <th></th>
+      <th></th>
     </tr>
     </thead>
     <tbody>
@@ -19,6 +20,7 @@
       #{list items:todolist, as:'todo'}
       <tr>
         <td> ${todo.title} </td>
+        <td> <img class="ui small image" src="/getimage/${todo.id}"> </td>
         <td> <a href="/dashboard/${member.id}/deletetodo/${todo.id} " class="ui tiny red button"> Delete </a> </td>
       #{/list}
     </div>
@@ -27,10 +29,16 @@
 
 </section>
 
-<form class="ui stacked segment form" action="/dashboard/addtodo" method="POST">
-  <div class="field">
-    <label>Title</label>
-    <input placeholder="Title" type="text" name="title">
+<form class="ui stacked segment form" action="/dashboard/addtodo" method="POST" enctype="multipart/form-data">
+  <div class="two fields">
+    <div class="field">
+      <label>Title</label>
+      <input placeholder="Title" type="text" name="title">
+    </div>
+    <div class="field">
+      <label>Image</label>
+      <input type="file" name="image">  </input>
+    </div>
   </div>
   <button class="ui blue submit button">Add Todo</button>
 </form>
